@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://yungis.deve/sitemap.xml
+Host: https://yungis.dev

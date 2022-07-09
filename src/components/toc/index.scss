@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+@import '../../styles/light-theme.scss';
+@import '../../styles/dark-theme.scss';
+
+body.light {
+  .toc_div {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 1360px) {
+    .toc_div {
+      background-color: #ffffff00;
+    }
+  }
+
+  .toc_link {
+    color: black;
+  }
+
+  .toc_link:hover {
+    color: rgb(239, 191, 0);
+  }
+
+  a:hover {
+    color: rgb(239, 191, 0);
+  }
+
+  .active {
+    color: #0687f0;
+  }
+
+  .toc_toggle {
+    background-color: #fff;
+    border: 2px solid black;
+  }
+
+  .jXGdsO {
+    border: 1px solid black;
+  }
+}
+
+body.dark {
+  .toc_div {
+    background-color: #282c35;
+  }
+
+  @media screen and (min-width: 1360px) {
+    .toc_div {
+      background-color: #ffffff00;
+    }
+  }
+
+  .toc_link {
+    color: rgb(229, 229, 229);
+  }
+
+  .toc_link:hover {
+    color: rgb(239, 191, 0);
+  }
+
+  a:hover {
+    color: rgb(239, 191, 0);
+  }
+
+  .active {
+    color: #0687f0;
+  }
+
+  .toc_toggle {
+    background-color: #282c35;
+    border: 2px solid rgb(229, 229, 229);
+  }
+
+  .jXGdsO {
+    border: 1px solid rgb(229, 229, 229);
+  }
+}

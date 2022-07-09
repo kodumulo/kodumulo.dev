@@ -1,0 +1,31 @@
+.about {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    border-bottom: none;
+  }
+
+  h1 {
+    padding-bottom: 0px;
+    padding-left: 8px;
+    // line-height: 1.05;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      top: 10px;
+      left: -18px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: violet;
+      content: '';
+    }
+  }
+
+  .end {
+    margin-top: 5em !important;
+  }
+}

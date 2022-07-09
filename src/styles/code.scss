@@ -1,0 +1,395 @@
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ * @custoimized by Jbee
+ */
+
+//  { lang: `javascript`, tag: `js`, color: `#f7df1e` },
+//  { lang: `js`, tag: `js`, color: `#f7df1e` },
+//  { lang: `jsx`, tag: `jsx`, color: `#61dafb` },
+//  { lang: `env`, tag: `env`, color: `#ff89d3` },
+//  { lang: `python`, tag: `py`, color: `#61da84` },
+//  { lang: `py`, tag: `py`, color: `#61da84` },
+//  { lang: `graphql`, tag: `graphql`, color: `#e10098` },
+//  { lang: `gql`, tag: `graphql`, color: `#e10098` },
+//  { lang: `html`, tag: `html`, color: `#005a9c` },
+//  { lang: `css`, tag: `css`, color: `#ff9800` },
+//  { lang: `shell`, tag: `shell`, color: `white` },
+//  { lang: `sh`, tag: `sh`, color: `white` },
+//  { lang: `bash`, tag: `bash`, color: `white` },
+//  { lang: `yml`, tag: `yaml`, color: `linen` },
+//  { lang: `yaml`, tag: `yaml`, color: `linen` },
+//  { lang: `markdown`, tag: `md`, color: `#e6ffed` },
+//  { lang: `md`, tag: `md`, color: `#e6ffed` },
+//  { lang: `mdx`, tag: `mdx`, color: `#55d179` },
+//  { lang: `json`, tag: `json`, color: `#fff` },
+//  { lang: `diff`, tag: `diff`, color: `#e8bd36` },
+//  { lang: `text`, tag: `text`, color: `gray` },
+
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+@import './variables.scss';
+
+$code-pre-background-color: #272822;
+
+.gatsby-code-title {
+  margin-top: 3em;
+  margin-bottom: -3.6em;
+  padding: 0.5em 0em 1em 0;
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+
+  background-color: $code-pre-background-color;
+  color: white;
+  z-index: 150;
+  text-align: center;
+  font-size: 95%;
+  border-top-left-radius: 0.6em;
+  border-top-right-radius: 0.6em;
+}
+
+.gatsby-code-title::before {
+  background-color: #ff5f56;
+  border-radius: 50%;
+  border: 0px;
+  box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+  content: ' ';
+  height: 12px;
+  margin-left: 12px;
+  margin-top: 6px;
+  width: 12px;
+  float: left;
+}
+
+code-line {
+  background-color: hsla(207, 95%, 15%, 1);
+  display: block;
+  margin-right: -1.2em;
+  margin-left: -1.2em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.35em solid #0687f0;
+}
+
+blockquote {
+  color: $blockquote-text-color;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #f8f8f2;
+  background: none;
+  // font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+  //   'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+  //   'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+  //   monospace;
+  // font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
+  //   monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.6;
+  font-size: 95%;
+  font-weight: 400;
+
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+
+  -ms-overflow-style: none; // IE 10+
+  overflow: -moz-scrollbars-none; // Firefox
+}
+
+pre[class*='language-']::-webkit-scrollbar {
+  display: none; // Safari and Chrome
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1.2em;
+  margin: 3em 0 3em 0;
+  overflow: auto;
+  border-radius: 0.6em;
+  box-shadow: 0 1em 0.875em 0 rgba(0, 0, 0, 0.3);
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: $code-pre-background-color;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em 0.6em;
+  border-radius: 0.3em;
+  white-space: normal;
+  background: $inline-dimmed-color;
+  color: $inline-text-color;
+  text-shadow: none;
+}
+
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection,
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  color: inherit;
+  background: #a599e9;
+}
+
+.token {
+  font-weight: 400;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: #999;
+}
+
+.token.delimiter,
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+  color: #ff9d00;
+}
+
+.token.operator,
+.token.attr-name {
+  color: rgb(255, 180, 84);
+}
+
+.token.punctuation {
+  color: #ffffff;
+}
+
+.token.boolean {
+  color: rgb(255, 98, 140);
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+  color: rgb(255, 157, 0);
+}
+
+.token.entity,
+.token.symbol {
+  color: #6897bb;
+}
+
+.token.number {
+  color: #ff628c;
+}
+
+.token.property,
+.token.constant,
+.token.variable {
+  color: #ff628c;
+}
+
+.token.string,
+.token.char {
+  color: #a6e22e;
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+  color: #a5c261;
+}
+
+.token.attr-value .punctuation:first-child {
+  color: #a9b7c6;
+}
+
+.token.url {
+  color: #287bde;
+  text-decoration: underline;
+}
+
+.token.function {
+  color: rgb(250, 208, 0);
+}
+
+.token.punctuation > .token.function {
+  color: rgb(250, 208, 0);
+}
+
+.token.regex {
+  background: #364135;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.inserted {
+  background: #00ff00;
+}
+
+.token.deleted {
+  background: #ff000d;
+}
+
+code.language-css .token.property,
+code.language-css .token.property + .token.punctuation {
+  color: #a9b7c6;
+}
+
+code.language-css .token.id {
+  color: #ffc66d;
+}
+
+code.language-css .token.selector > .token.class,
+code.language-css .token.selector > .token.attribute,
+code.language-css .token.selector > .token.pseudo-class,
+code.language-css .token.selector > .token.pseudo-element {
+  color: #ffc66d;
+}
+
+.token.class-name {
+  color: #fb94ff;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: none;
+}
+
+pre .line-highlight,
+pre .line-highlight.line-highlight,
+pre > code.line-highlight {
+  margin-top: 36px;
+  background: linear-gradient(to right, rgba(179, 98, 255, 0.17), transparent);
+}
+
+pre .line-highlight:before,
+pre > code.line-highlight:before,
+pre .line-highlight[data-end]:after,
+pre > code.line-highlight[data-end]:after {
+  content: '';
+}
+
+pre[class*='language-']::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 0.075rem;
+  padding: 0.1rem 0.5rem;
+  position: relative;
+  right: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  top: -1.55em;
+  float: right;
+  text-shadow: none;
+}
+
+pre[class='language-javascript']::before,
+pre[class='language-js']::before {
+  content: 'js';
+  background: #f7df1e;
+  color: black;
+}
+
+pre[class='language-html']::before {
+  content: 'html';
+  background: #005a9c;
+  color: white;
+}
+
+pre[class='language-css']::before {
+  content: 'css';
+  background: #ff9800;
+  color: white;
+}
+
+pre[class='language-jsx']::before {
+  content: 'jsx';
+  background: #61dafb;
+  color: white;
+}
+
+pre[class='language-python']::before,
+pre[class='language-py']::before {
+  content: 'py';
+  background: #61da84;
+  color: white;
+}
+
+pre[class='language-env']::before {
+  content: 'env';
+  background: #ff89d3;
+  color: white;
+}
+
+pre[class='language-shell']::before,
+pre[class='language-bash']::before,
+pre[class='language-sh']::before {
+  content: 'sh';
+  background: white;
+  color: black;
+}
+
+pre[class='language-yaml']::before,
+pre[class='language-yml']::before {
+  content: 'yml';
+  background: linen;
+  color: black;
+}
+
+pre[class='language-markdown']::before,
+pre[class='language-md']::before {
+  content: 'md';
+  background: #e6ffed;
+  color: black;
+}
+
+pre[class='language-mdx']::before {
+  content: 'mdx';
+  background: #55d179;
+  color: white;
+}
+
+pre[class='language-json']::before {
+  content: 'json';
+  background: #fff;
+  color: black;
+}
+
+pre[class='language-text']::before,
+pre[class='language-txt']::before {
+  content: 'txt';
+  background: gray;
+  color: white;
+}
+
+pre[class='language-diff']::before {
+  content: 'diff';
+  background: #e8bd36;
+  color: white;
+}
