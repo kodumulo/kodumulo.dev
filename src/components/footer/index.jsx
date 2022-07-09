@@ -4,7 +4,7 @@ import './index.scss'
 
 export const Footer = () => (
   <footer className="footer">
-    2021 ©
+    2022 ©
     <a target="_blank" href="https://github.com/kodumulo">
       Kodumulo
     </a>

@@ -103,8 +103,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://yungis.dev',
-        sitemap: 'https://yungis.dev/sitemap.xml',
+        host: 'https://kodumulo.dev',
+        sitemap: 'https://kodumulo.dev/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },

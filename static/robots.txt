@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://yungis.deve/sitemap.xml
-Host: https://yungis.dev
+Sitemap: https://kodumulo.dev/sitemap.xml
+Host: https://kodumulo.dev
