@@ -1,8 +1,8 @@
 module.exports = {
   title: `KODUMULO.DEV`,
-  description: `울면서 코딩하는 사람의 블로그`,
+  description: `천재가 될려고 하는 ENTJ 개발자`,
   author: `Kodumulo`,
-  introduction: `울면서 코딩하는 사람의 블로그`,
+  introduction: `천재가 될려고 하는 ENTJ 개발자`,
   siteUrl: `https://kodumulo.dev`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
