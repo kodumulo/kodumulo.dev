@@ -7,7 +7,7 @@ showToc: true
 ---
 > 2021년 ~ 2022년 짧은 잠수 이후 복귀 글
 
-![Main-image](./images/felling-back-thumbnail.png)
+![Main-image](./images/feeling-back-thumbnail.png)
 
 ## 이 글을 쓰게 된 이유
 
