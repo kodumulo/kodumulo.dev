@@ -11,7 +11,7 @@ module.exports = {
     facebook: ``, // Your Facebook account
     instagram: `kodumulo_`,
   },
-  icon: `content/assets/felog.png`, // Add your favicon
+  icon: `content/assets/favicon.png`, // Add your favicon
   keywords: [
     `blog`,
     `c`,
